@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Mahshi House - الصفحة الرئيسية</title>
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    direction:rtl;
+    background: url('https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #f8fafc;
+}
+
+.overlay {
+    background-color: rgba(15,23,42,0.7);
+    min-height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #facc15;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 22px;
+    color: #cbd5f5;
+    margin-bottom: 10px;
+}
+
+.location {
+    font-size: 18px;
+    color: #facc15;
+    margin-bottom: 40px;
+}
+
+.button-main {
+    background: #facc15;
+    color: #0f172a;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.button-main:hover {
+    background: #eab308;
+}
+
+/* Footer */
+.footer {
+    background: #111827;
+    padding: 20px;
+    text-align: center;
+    color: #cbd5f5;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #facc15;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+</style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="overlay">
+    <div class="header">
+        <h1>🍽️ Mahshi House</h1>
+        <p>خبرة 15 سنة في بيع المحاشي</p>
+        <p>معنا ألذ محاشي مصرية بأيدي مصرية 🇪🇬</p>
+        <p class="location">📍 عمان، عمان، سلطنة عمان</p>
+        <a class="button-main" href="shop.html">تسوق الآن</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>تواصل معنا: 
+        <a href="https://wa.me/96877443494" target="_blank">WhatsApp</a> | 
+        <a href="https://www.instagram.com/3k_r0to/" target="_blank">Instagram</a>
+    </p>
+    <p>© 2026 Mahshi House</p>
+</div>
+
+<!-- WhatsApp ثابت -->
+<div class="whatsapp-float" onclick="window.open('https://wa.me/96877443494','_blank')">
+  <i class="fab fa-whatsapp"></i>
+</div>
+
+</body>
+</html>

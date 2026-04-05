@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>🥬 المحشي - Mahshi House</title>
+<style>
+body {margin:0;font-family:'Segoe UI',sans-serif;direction:rtl;background:#0f172a;color:#f8fafc;}
+.navbar{display:flex;justify-content:center;background:#1e293b;padding:15px 0;gap:15px;}
+.navbar a{color:#facc15;text-decoration:none;font-weight:bold;padding:8px 15px;border-radius:8px;transition:.3s;}
+.navbar a:hover{background:#facc15;color:#0f172a;}
+.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));padding:20px;gap:25px;}
+.card{background:linear-gradient(145deg,#1e293b,#0f172a);border-radius:20px;padding:20px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,0.5);transition:.3s;}
+.card:hover{transform:translateY(-10px) scale(1.02);}
+.card img{width:100%;border-radius:15px;margin-bottom:15px;}
+button{background:#facc15;border:none;padding:10px;border-radius:10px;cursor:pointer;width:100%;font-weight:bold;margin-top:10px;}
+button:hover{background:#eab308;}
+h2{text-align:center;color:#facc15;}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="shop.html">🔙 العودة للأقسام</a>
+  <a href="cart.html">🛒 السلة</a>
+</div>
+
+<h2>🥬 أصناف المحشي</h2>
+<div class="container">
+
+<!-- ملفوف -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617196036355-6edc3b7bfa50?auto=format&fit=crop&w=400&q=80" alt="ملفوف ب ٢">
+<h3>ملفوف</h3>
+<p>السعر: 2 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-cabbage-2"></label>
+<button onclick="addToCartAmount('ملفوف',2,'qty-cabbage-2')">اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617196036355-6edc3b7bfa50?auto=format&fit=crop&w=400&q=80" alt="ملفوف ب ٣">
+<h3>ملفوف</h3>
+<p>السعر: 3 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-cabbage-3"></label>
+<button onclick="addToCartAmount('ملفوف',3,'qty-cabbage-3')">اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617196036355-6edc3b7bfa50?auto=format&fit=crop&w=400&q=80" alt="ملفوف ب ٥">
+<h3>ملفوف</h3>
+<p>السعر: 5 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-cabbage-5"></label>
+<button onclick="addToCartAmount('ملفوف',5,'qty-cabbage-5')">اطلب الآن</button>
+</div>
+
+<!-- ورق عنب -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80" alt="ورق عنب ب ٣">
+<h3>ورق عنب</h3>
+<p>السعر: 3 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-grape-3"></label>
+<button onclick="addToCartAmount('ورق عنب',3,'qty-grape-3')">اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400&q=80" alt="ورق عنب ب ٥">
+<h3>ورق عنب</h3>
+<p>السعر: 5 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-grape-5"></label>
+<button onclick="addToCartAmount('ورق عنب',5,'qty-grape-5')">اطلب الآن</button>
+</div>
+
+<!-- مشكل -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589308078050-84eb998bdc40?auto=format&fit=crop&w=400&q=80" alt="مشكل ٢">
+<h3>مشكل</h3>
+<p>السعر: 2 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-mixed-2"></label>
+<button onclick="addToCartAmount('مشكل',2,'qty-mixed-2')">اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589308078050-84eb998bdc40?auto=format&fit=crop&w=400&q=80" alt="مشكل ٣">
+<h3>مشكل</h3>
+<p>السعر: 3 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-mixed-3"></label>
+<button onclick="addToCartAmount('مشكل',3,'qty-mixed-3')">اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589308078050-84eb998bdc40?auto=format&fit=crop&w=400&q=80" alt="مشكل ٥">
+<h3>مشكل</h3>
+<p>السعر: 5 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-mixed-5"></label>
+<button onclick="addToCartAmount('مشكل',5,'qty-mixed-5')">اطلب الآن</button>
+</div>
+
+<!-- صينية -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603052875604-06cde7e1f5e5?auto=format&fit=crop&w=400&q=80" alt="صينية ب ١٥">
+<h3>صينية</h3>
+<p>السعر: 15 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-tray-15"></label>
+<button onclick="addToCartAmount('صينية',15,'qty-tray-15')">اطلب الآن</button>
+</div>
+
+</div>
+
+<script>
+function addToCartAmount(name, price, qtyId){
+  const qty = parseInt(document.getElementById(qtyId).value);
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  for(let i=0;i<qty;i++){
+    cart.push({name, price});
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`تمت الإضافة ${qty} × ${name} ✅`);
+}
+</script>
+
+</body>
+</html>

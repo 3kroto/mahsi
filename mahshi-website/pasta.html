@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>🍝 المكرونة - Mahshi House</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin:0;font-family:'Segoe UI',sans-serif;direction:rtl;background:#0f172a;color:#f8fafc;}
+.navbar{display:flex;justify-content:center;flex-wrap:wrap;background:#1e293b;padding:15px 0;gap:15px;}
+.navbar a{color:#facc15;text-decoration:none;font-weight:bold;padding:8px 15px;border-radius:8px;transition:.3s;}
+.navbar a:hover{background:#facc15;color:#0f172a;}
+.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));padding:20px;gap:20px;}
+.card{background:linear-gradient(145deg,#1e293b,#0f172a);border-radius:20px;padding:20px;text-align:center;box-shadow:0 10px 20px rgba(0,0,0,0.5);transition:.3s;}
+.card:hover{transform:translateY(-8px) scale(1.02);}
+.card img{width:100%;border-radius:15px;margin-bottom:15px;}
+button{background:#facc15;border:none;padding:10px;border-radius:10px;cursor:pointer;width:100%;font-weight:bold;margin-top:10px;}
+button:hover{background:#eab308;}
+h2{text-align:center;color:#facc15;}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="shop.html">🔙 العودة للأقسام</a>
+  <a href="cart.html">🛒 السلة</a>
+</div>
+
+<h2>🍝 المكرونة بشاميل</h2>
+<div class="container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601312375311-7c96ffb0d4d8?auto=format&fit=crop&w=400&q=80" alt="مكرونة ٢">
+<h3>مكرونة</h3>
+<p>السعر: 2 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-pasta-2"></label>
+<button onclick="addToCartAmount('مكرونة',2,'qty-pasta-2')">اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601312375311-7c96ffb0d4d8?auto=format&fit=crop&w=400&q=80" alt="مكرونة ٣">
+<h3>مكرونة</h3>
+<p>السعر: 3 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-pasta-3"></label>
+<button onclick="addToCartAmount('مكرونة',3,'qty-pasta-3')">اطلب الآن</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601312375311-7c96ffb0d4d8?auto=format&fit=crop&w=400&q=80" alt="مكرونة ٥">
+<h3>مكرونة</h3>
+<p>السعر: 5 ريال</p>
+<label>الكمية: <input type="number" min="1" value="1" id="qty-pasta-5"></label>
+<button onclick="addToCartAmount('مكرونة',5,'qty-pasta-5')">اطلب الآن</button>
+</div>
+
+</div>
+
+<script>
+function addToCartAmount(name, price, qtyId){
+  const qty = parseInt(document.getElementById(qtyId).value);
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  for(let i=0;i<qty;i++){
+    cart.push({name, price});
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`تمت الإضافة ${qty} × ${name} ✅`);
+}
+</script>
+
+</body>
+</html>
